@@ -62,3 +62,6 @@ typing_extensions==4.6.1
 urllib3==2.0.2
 wcwidth==0.2.6
 wget==3.2
+uvicorn==8.1.2
+fastapi==8.1.2
+
