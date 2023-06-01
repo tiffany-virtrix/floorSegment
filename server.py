@@ -143,16 +143,10 @@ async def click_images(
 async def read_assets(path, file_name):
     return f"assets/{path}/{file_name}"
 
-@app.get("/test", response_class=HTMLResponse)
+@app.get("/", response_class=HTMLResponse)
 async def read_index():
     return read_content('floorSegment.html')
 
 
-@app.get("/")
-def hello():
-    return {"result": "Welcome to floorSegment"}
-
-
-
 import uvicorn
-uvicorn.run("server:app", host="0.0.0.0", port=8000, reload=True, workers=2)
+uvicorn.run(app, host="0.0.0.0", port=8000)
