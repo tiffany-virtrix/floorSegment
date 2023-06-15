@@ -118,6 +118,7 @@
       align-items: center;
       justify-content: center;
     }
+    
     #spinner-container span {
       font-family: Arial, sans-serif;
       font-size: 16px;
@@ -329,6 +330,7 @@
       formData.append("x", x);
       formData.append("y", y);
       // Send a POST request to the server API
+
       fetch("/click", {
           method: "POST",
           body: formData,
@@ -763,7 +765,7 @@
       const ImageLink = document.createElement('a');
       ImageLink.href = DataUrl;
       ImageLink.download = imageName + '.png';
-      ImageLink.click();
+      // ImageLink.click();
 
       // Save the mask image
       const mask_canvas = document.createElement('canvas');

@@ -138,7 +138,6 @@ async def click_images(
         status_code=200,
     )
 
-
 @app.get("/assets/{path}/{file_name}", response_class=FileResponse)
 async def read_assets(path, file_name):
     return f"assets/{path}/{file_name}"
